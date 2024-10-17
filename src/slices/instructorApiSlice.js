@@ -147,8 +147,8 @@ endpoints:(builder)=>({
             body:data
         })
       }),
-      getStats: builder.query({
-        query: () => `${INTRUCTOR_URL}/stats`,
+      getInstructorStats: builder.query({
+        query: () => `${INTRUCTOR_URL}/instructor-stats`,
       }),
       getInstructorEarnings: builder.query({
         query: ({ page, limit }) => `${INTRUCTOR_URL}/earnings?page=${page}&limit=${limit}`,
@@ -203,10 +203,10 @@ export const {useInstructorLoginMutation,
               useStartLiveSessionMutation,
               useStopLiveSessionMutation,
               useEditVideoToSectionMutation,
-              useAddNotificationMutation,
-              useGetStatsQuery,
+              useAddNotificationMutation, 
               useGetInstructorEarningsQuery,
               useGetPurchasedCoursesQuery,
               useGetLiveTokenMutation,
-              useUpdateCoverImageMutation
+              useUpdateCoverImageMutation,
+              useGetInstructorStatsQuery
 } = instructorApiSlice 

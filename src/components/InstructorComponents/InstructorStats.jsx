@@ -1,11 +1,11 @@
 import React from 'react';
 import { Card, Row, Col, Container, Spinner, Alert } from 'react-bootstrap';
-import { useGetStatsQuery } from '../../slices/instructorApiSlice';
+import { useGetInstructorStatsQuery } from '../../slices/instructorApiSlice';
 // import { useGetInstructorDashboardStatsQuery } from '../slices/instructorApiSlice'; // Assuming we use RTK Query
 
 const InstructorStats = () => {
-  const { data: stats, error, isLoading } = useGetStatsQuery()
-  console.log(stats)
+  const { data: intructorStats, error, isLoading } = useGetInstructorStatsQuery()
+  console.log(intructorStats)
   if (isLoading) {
     return (
       <Container className="mt-5 text-center">
@@ -30,7 +30,7 @@ const InstructorStats = () => {
           <Card className="mb-4">
             <Card.Body className='text-center'>
               <Card.Title>Total Courses Created</Card.Title>
-              <Card.Text>{stats?.totalCourses || 0}</Card.Text>
+              <Card.Text>{intructorStats?.totalCourses || 0}</Card.Text>
             </Card.Body>
           </Card>
         </Col>
@@ -39,7 +39,7 @@ const InstructorStats = () => {
           <Card className="mb-4">
             <Card.Body className='text-center'>
               <Card.Title>Total Students Enrolled</Card.Title>
-              <Card.Text>{stats?.totalUsers || 0}</Card.Text>
+              <Card.Text>{intructorStats?.totalStudents || 0}</Card.Text>
             </Card.Body>
           </Card>
         </Col>
@@ -48,7 +48,7 @@ const InstructorStats = () => {
           <Card className="mb-4">
             <Card.Body className='text-center'>
               <Card.Title>Total Earnings</Card.Title>
-              <Card.Text>₹{stats?.totalRevenue?.toLocaleString() || '0'}</Card.Text>
+              <Card.Text>₹{intructorStats?.totalEarnings?.toLocaleString() || '0'}</Card.Text>
             </Card.Body>
           </Card>
         </Col>
