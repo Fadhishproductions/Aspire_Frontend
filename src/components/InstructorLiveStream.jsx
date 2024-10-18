@@ -60,6 +60,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useSocket } from '../context/SocketContext';
 import { useNavigate } from 'react-router-dom';
 export const LivestreamView = ({courseId}) => {  
+  const socket = useSocket()
   useEffect(() => {
     // Join the course room when the component mounts
   socket.emit('joinRoom', courseId); 
@@ -79,7 +80,6 @@ const {
 const call = useCall();
 const { camera: cam, isEnabled: isCamEnabled } = useCameraState();
 const { microphone: mic, isEnabled: isMicEnabled } = useMicrophoneState();
-const socket = useSocket()
 const navigate = useNavigate() 
   const participantCount = useParticipantCount();
   const isLive = useIsCallLive(); 
