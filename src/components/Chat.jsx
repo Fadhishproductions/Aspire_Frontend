@@ -8,6 +8,7 @@ import {useSocket} from '../context/SocketContext';
 
 
 const Chat = ({ courseId, role }) => {
+  const socket = useSocket();
   const instructorInfo = useSelector((state) => state.instructorauth.instructorInfo);
   const userInfo = useSelector((state) => state.auth.userInfo);
 
@@ -28,8 +29,7 @@ const Chat = ({ courseId, role }) => {
   const [showEmojiPicker, setShowEmojiPicker] = useState(false); // State to show/hide emoji picker
 
   useEffect(() => {
-    const socket = useSocket();
-    // Automatically join the predefined room when the component mounts
+     // Automatically join the predefined room when the component mounts
     socket.emit('joinRoom', predefinedRoomName);
 
     // Listen for messages from the server
