@@ -10,8 +10,8 @@ import {
 
 export default function InstructorLiveStream({courseId}) {
   const apiKey = "mmhfdzb5evj2";
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Byb250by5nZXRzdHJlYW0uaW8iLCJzdWIiOiJ1c2VyL0dlbmVyYWxfVmVlcnMiLCJ1c2VyX2lkIjoiR2VuZXJhbF9WZWVycyIsInZhbGlkaXR5X2luX3NlY29uZHMiOjYwNDgwMCwiaWF0IjoxNzI4NTY1ODg1LCJleHAiOjE3MjkxNzA2ODV9.1LDLpQdD8o8hmvt56KPFBOBvjYceR-SBkP7Y6eWJDwA";
-  const userId = "General_Veers";
+ const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3Byb250by5nZXRzdHJlYW0uaW8iLCJzdWIiOiJ1c2VyL0MtM1BPIiwidXNlcl9pZCI6IkMtM1BPIiwidmFsaWRpdHlfaW5fc2Vjb25kcyI6NjA0ODAwLCJpYXQiOjE3MjkyNjI2NjksImV4cCI6MTcyOTg2NzQ2OX0.GxYzKMKY8YgckEPq2rr_yLBbwne5yIt-Yg3ti7ghhdw";
+const userId = "C-3PO";
   const callId = "uDShwfvZ6uhJ";
   
   const user = { id: userId, name: "Instructor" };
