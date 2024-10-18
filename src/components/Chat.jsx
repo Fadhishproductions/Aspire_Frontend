@@ -4,8 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useSelector } from 'react-redux';
 import Picker from 'emoji-picker-react';  
 import moment from 'moment';  
+import {useSocket} from '../context/SocketContext';
 
-const socket = io('http://localhost:4000'); // Your server URL
 
 const Chat = ({ courseId, role }) => {
   const instructorInfo = useSelector((state) => state.instructorauth.instructorInfo);
@@ -28,6 +28,7 @@ const Chat = ({ courseId, role }) => {
   const [showEmojiPicker, setShowEmojiPicker] = useState(false); // State to show/hide emoji picker
 
   useEffect(() => {
+    const socket = useSocket();
     // Automatically join the predefined room when the component mounts
     socket.emit('joinRoom', predefinedRoomName);
 
