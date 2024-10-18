@@ -3,7 +3,7 @@ import InstructorLayout from "../../components/InstructorLayout.jsx";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
   useGetCourseQuery,
-  useGetSectionsQuery,
+  useGetInstructorSectionsQuery,
   useCreateSectionMutation,
   useAddVideoToSectionMutation,
   useAddQuizMutation,
@@ -91,7 +91,7 @@ function InstructorCourseDetailsScreen() {
     data: fetchedSections,
     isLoading: isSectionsLoading,
     error: sectionsError,
-  } = useGetSectionsQuery({ id });
+  } = useGetInstructorSectionsQuery({ id });
 
   useEffect(() => {
     if (course) {
