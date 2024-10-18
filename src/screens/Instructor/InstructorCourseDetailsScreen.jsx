@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import {
   useGetCourseQuery,
   useGetInstructorSectionsQuery,
-  useCreateSectionMutation,
+  useCreateSectionMutation,   
   useAddVideoToSectionMutation,
   useAddQuizMutation,
   useAddPreviewVideoMutation,
