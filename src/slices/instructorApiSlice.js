@@ -81,7 +81,7 @@ endpoints:(builder)=>({
     }),
     getSections:builder.query({
         query:({id})=>({
-            url:`${INTRUCTOR_URL}/course/${id}/sections`,
+            url:`${INTRUCTOR_URL}/coursedetails/${id}/sections`,
             method:'GET'
         })
     }),
