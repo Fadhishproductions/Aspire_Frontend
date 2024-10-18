@@ -79,9 +79,9 @@ endpoints:(builder)=>({
             body:data
         })
     }),
-    getSections:builder.query({
+    getInstructorSections:builder.query({
         query:({id})=>({
-            url:`${INTRUCTOR_URL}/coursedetails/${id}/sections`,
+            url:`${INTRUCTOR_URL}/course/${id}/sections`,
             method:'GET'
         })
     }),
@@ -194,7 +194,7 @@ export const {useInstructorLoginMutation,
               useEditCourseMutation,
               useGetCourseQuery,
               useCreateSectionMutation,
-              useGetSectionsQuery  ,
+              useGetInstructorSectionsQuery,  ,
               useAddVideoToSectionMutation,
               useAddQuizMutation, 
               useAddPreviewVideoMutation,
