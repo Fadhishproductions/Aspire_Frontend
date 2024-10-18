@@ -1,6 +1,6 @@
 import {createApi , fetchBaseQuery} from '@reduxjs/toolkit/query/react'
-import config from '../config';
-const baseQuery = fetchBaseQuery({baseUrl: config.domain, // Your API base URL
+ 
+const baseQuery = fetchBaseQuery({baseUrl: import.meta.env.VITE_DOMAIN_SERVER, // Your API base URL
     credentials: 'include',  
     });
 

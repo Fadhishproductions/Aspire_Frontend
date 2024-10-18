@@ -11,8 +11,7 @@ import {
 import { Row, Col, ListGroup, Card, Button, Container, ProgressBar } from "react-bootstrap";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import Loader from "../../components/Loader";
-import QuizBox from "../../components/QuizBox";
-import config from "../../config";
+import QuizBox from "../../components/QuizBox"; 
 import { useSocket } from "../../context/SocketContext";
 import StudentLayout from "../../components/StudentComponents/StudentLayout";
 
@@ -257,7 +256,7 @@ function CourseAttendingScreen() {
                           }}
                         >
                           <source
-                            src={`${config.domain}/api/users/live-stream/${currentSection}/video/${selectedVideo._id}#t=${lastWatchedTime}`}
+                            src={`${import.meta.env.VITE_DOMAIN_SERVER}/api/users/live-stream/${currentSection}/video/${selectedVideo._id}#t=${lastWatchedTime}`}
                             type="video/mp4"
                           />
                           Your browser does not support the video tag.

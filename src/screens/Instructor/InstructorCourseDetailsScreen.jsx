@@ -26,8 +26,7 @@ import AddNotificationModal from "../../components/AddNotificationModal.jsx";
 import { useDispatch } from "react-redux";
 import { addLiveStream } from "../../slices/userCourseSlice.js";
 import ConfirmationBox from "../../components/ConfirmationBox"; // Import ConfirmationBox
-import config from "../../config.js";
-
+ 
 function InstructorCourseDetailsScreen() {
   const [showNotificationModal, setShowNotificationModal] = useState(false);
   const [showPreviewModal, setShowPreviewModal] = useState(false);
@@ -170,9 +169,9 @@ function InstructorCourseDetailsScreen() {
     const formData = new FormData();
     formData.append("file", file);
     const endpoint = role === "video"
-    ? `https://api.cloudinary.com/v1_1/${config.CLOUDINARY_CLOUD_NAME}/video/upload`
-    : `https://api.cloudinary.com/v1_1/${config.CLOUDINARY_CLOUD_NAME}/image/upload`;
-    formData.append("upload_preset",config.CLOUDINARY_API_PRESET); // Replace with your Cloudinary upload preset
+    ? `https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLOUDINARY_CLOUD_NAME}/video/upload`
+    : `https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLOUDINARY_CLOUD_NAME}/image/upload`;
+    formData.append("upload_preset",import.meta.env.VITE_CLOUDINARY_API_PRESET); // Replace with your Cloudinary upload preset
     cancelTokenSource.current = axios.CancelToken.source();
     
     try {

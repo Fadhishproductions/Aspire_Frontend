@@ -1,16 +1,15 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import { io } from 'socket.io-client';
 export const IoContext = createContext(null)
-import config from '../config';
-export function SocketContext({children}) {
-  
-   const socket = io("http://localhost:4000");
+ export function SocketContext({children}) {
+  console.log(import.meta.env)
+   const socket = io(import.meta.env.VITE_DOMAIN_SOCKET); 
   useEffect(() => {
     return () => {
       socket.disconnect(); // Clean up the connection on unmount
     };
   }, [socket]); 
-  return ( 
+  return (  
 
     <IoContext.Provider value={socket}>
       {children}
