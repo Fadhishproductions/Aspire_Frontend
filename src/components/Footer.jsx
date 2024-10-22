@@ -29,7 +29,7 @@ const Footer = () => {
 
         <Row className='mt-3'>
           <Col className='text-center' style={{ color: '#ccc', fontSize: '0.9rem' }}>
-            &copy; 2021 Fadhish Productions.
+            &copy; 2024 Fadhish Productions.
           </Col>
         </Row>
       </Container>
