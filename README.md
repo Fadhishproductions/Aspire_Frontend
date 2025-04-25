@@ -1,8 +1,27 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Clone the repository and connect the backend 
+to start : npm run start
 
-Currently, two official plugins are available:
+🔗 Live Link (Client):  
+https://keep-notes-client-fawn.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 Live Link (Backend API):  
+https://keepnotes-server-zdg8.onrender.com
+
+📂 GitHub Repositories:  
+Backend:https://github.com/Fadhishproductions/keepNotes_Server.git
+
+Clone the backend and connect with mongodb 
+
+🛠️ Tech Stack:
+- Frontend: React (Vite) + Redux Toolkit + RTK Query + Axios
+- Backend: Express.js + MongoDB Atlas + JWT + bcrypt
+- Deployment: Vercel (Frontend), Render (Backend)
+
+✅ Key Features Implemented:
+- Secure user authentication (normal + Google OAuth)
+- Refresh/access token strategy (with HTTP-only cookies)
+- Create, view, edit, delete, reorder notes
+- Drag & drop reordering with local cache update
+- Centralized error handling (backend + frontend)
+- Responsive design with clean UI/UX
